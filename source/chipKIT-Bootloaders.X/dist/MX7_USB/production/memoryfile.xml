@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="dist/MX7_USB/production/chipKIT-Bootloaders.X.production.elf">                 
+    <memory name="program">                 
+      <units>bytes</units>                 
+      <length>7888</length>                 
+      <used>5208</used>                     
+      <free>2680</free>                     
+    </memory>                              
+    <memory name="data">              
+      <units>bytes</units>                 
+      <length>16384</length>                 
+      <used>6184</used>                     
+      <free>10200</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 

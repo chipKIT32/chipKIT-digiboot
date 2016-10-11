@@ -1,0 +1,837 @@
+
+Microchip PIC32 Memory-Usage Report
+
+kseg0 Program-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+.text                   0x9fc004b0         0x15f0        5616  App's exec code 
+.cache_init.cache       0x9fc01aa0           0xc0         192   
+.cache_init.pic32_init_ 0x9fc01b60           0xc0         192   
+.tlb.__pic32_tlb_init_e 0x9fc01c20           0xbc         188   
+.dinit                  0x9fc01cdc           0x80         128   
+.cache_init.pic32_size_ 0x9fc01d5c           0x3c          60   
+.text.main_entry        0x9fc01d98           0x34          52   
+.rodata                 0x9fc01dcc            0xc          12  Read-only const 
+      Total kseg0_program_mem used  :      0x1928        6440  10.0% of 0xfa50
+
+kseg0 Boot-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+         Total kseg0_boot_mem used  :           0           0  
+
+kseg1 Boot-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+.reset                  0xbfc00000          0x1a0         416  Reset handler 
+         Total kseg1_boot_mem used  :       0x1a0         416  54.2% of 0x300
+        --------------------------------------------------------------------------
+         Total Program Memory used  :      0x1ac8        6856  10.6% of 0xfd50
+        --------------------------------------------------------------------------
+
+
+kseg0 Data-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+.dbg_data               0x80000000          0x380         896  Memory reserved for debugger exec 
+.skip_ram_space         0x80000380          0x280         640   
+.sdata                  0x80000600           0x44          68  Small init data 
+.sbss                   0x80000644           0x3c          60  Small uninit data 
+.bss                    0x80000680          0x980        2432  Uninitialized data 
+         Total kseg0_data_mem used  :      0x1000        4096  0.8% of 0x80000
+        --------------------------------------------------------------------------
+            Total Data Memory used  :      0x1000        4096  0.8% of 0x80000
+        --------------------------------------------------------------------------
+
+
+Dynamic Data-Memory Reservation
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+heap                    0x80001008              0           0  Reserved for heap 
+stack                   0x80001020        0x7efd8      520152  Reserved for stack 
+
+        --------------------------------------------------------------------------
+
+Discarded input sections
+
+ .reginfo       0x00000000       0x18 build/MfgWiFire/production/_ext/1472/main.o
+ .reginfo       0x00000000       0x18 build/MfgWiFire/production/_ext/1472/crt0MZ.o
+ .reginfo       0x00000000       0x18 build/MfgWiFire/production/_ext/1472/pic32_init_cache.o
+ .reginfo       0x00000000       0x18 build/MfgWiFire/production/_ext/1472/pic32_init_tlb_ebi_sqi.o
+ .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/xc32/v1.42/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048ECG100\processor.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+kseg0_program_mem 0x9fc004b0         0x0000fa50         xr
+kseg0_boot_mem   0x9fc004b0         0x00000000
+kseg1_boot_mem   0xbfc00000         0x00000300
+kseg1_debug_mem  0xbfc00300         0x000001b0
+kseg1_boot_mem_4B0 0xbfc004b0         0x0000fa50
+config_BFC0FF40  0xbfc0ff40         0x00000004
+config_BFC0FF44  0xbfc0ff44         0x00000004
+config_BFC0FF48  0xbfc0ff48         0x00000004
+config_BFC0FF4C  0xbfc0ff4c         0x00000004
+config_BFC0FF50  0xbfc0ff50         0x00000004
+config_BFC0FF54  0xbfc0ff54         0x00000004
+config_BFC0FF58  0xbfc0ff58         0x00000004
+config_BFC0FF5C  0xbfc0ff5c         0x00000004
+config_BFC0FF60  0xbfc0ff60         0x00000004
+config_BFC0FF64  0xbfc0ff64         0x00000004
+config_BFC0FF68  0xbfc0ff68         0x00000004
+config_BFC0FF6C  0xbfc0ff6c         0x00000004
+config_BFC0FF70  0xbfc0ff70         0x00000004
+config_BFC0FF74  0xbfc0ff74         0x00000004
+config_BFC0FF78  0xbfc0ff78         0x00000004
+config_BFC0FF7C  0xbfc0ff7c         0x00000004
+config_BFC0FFC0  0xbfc0ffc0         0x00000004
+config_BFC0FFC4  0xbfc0ffc4         0x00000004
+config_BFC0FFC8  0xbfc0ffc8         0x00000004
+config_BFC0FFCC  0xbfc0ffcc         0x00000004
+config_BFC0FFD0  0xbfc0ffd0         0x00000004
+config_BFC0FFD4  0xbfc0ffd4         0x00000004
+config_BFC0FFD8  0xbfc0ffd8         0x00000004
+config_BFC0FFDC  0xbfc0ffdc         0x00000004
+config_BFC0FFE0  0xbfc0ffe0         0x00000004
+config_BFC0FFE4  0xbfc0ffe4         0x00000004
+config_BFC0FFE8  0xbfc0ffe8         0x00000004
+config_BFC0FFEC  0xbfc0ffec         0x00000004
+config_BFC0FFF0  0xbfc0fff0         0x00000004
+config_BFC0FFF4  0xbfc0fff4         0x00000004
+config_BFC0FFF8  0xbfc0fff8         0x00000004
+config_BFC0FFFC  0xbfc0fffc         0x00000004
+lowerbootaliaslastpage 0xbfc10000         0x00004000
+upperbootalias   0xbfc20000         0x00014000
+boot1            0xbfc40000         0x0000ff00
+config_BFC4FF40  0xbfc4ff40         0x00000004
+config_BFC4FF44  0xbfc4ff44         0x00000004
+config_BFC4FF48  0xbfc4ff48         0x00000004
+config_BFC4FF4C  0xbfc4ff4c         0x00000004
+config_BFC4FF50  0xbfc4ff50         0x00000004
+config_BFC4FF54  0xbfc4ff54         0x00000004
+config_BFC4FF58  0xbfc4ff58         0x00000004
+config_BFC4FF5C  0xbfc4ff5c         0x00000004
+config_BFC4FF60  0xbfc4ff60         0x00000004
+config_BFC4FF64  0xbfc4ff64         0x00000004
+config_BFC4FF68  0xbfc4ff68         0x00000004
+config_BFC4FF6C  0xbfc4ff6c         0x00000004
+config_BFC4FF70  0xbfc4ff70         0x00000004
+config_BFC4FF74  0xbfc4ff74         0x00000004
+config_BFC4FF78  0xbfc4ff78         0x00000004
+config_BFC4FF7C  0xbfc4ff7c         0x00000004
+config_BFC4FFC0  0xbfc4ffc0         0x00000004
+config_BFC4FFC4  0xbfc4ffc4         0x00000004
+config_BFC4FFC8  0xbfc4ffc8         0x00000004
+config_BFC4FFCC  0xbfc4ffcc         0x00000004
+config_BFC4FFD0  0xbfc4ffd0         0x00000004
+config_BFC4FFD4  0xbfc4ffd4         0x00000004
+config_BFC4FFD8  0xbfc4ffd8         0x00000004
+config_BFC4FFDC  0xbfc4ffdc         0x00000004
+config_BFC4FFE0  0xbfc4ffe0         0x00000004
+config_BFC4FFE4  0xbfc4ffe4         0x00000004
+config_BFC4FFE8  0xbfc4ffe8         0x00000004
+config_BFC4FFEC  0xbfc4ffec         0x00000004
+config_BFC4FFF0  0xbfc4fff0         0x00000004
+config_BFC4FFF4  0xbfc4fff4         0x00000004
+config_BFC4FFF8  0xbfc4fff8         0x00000004
+config_BFC4FFFC  0xbfc4fffc         0x00000004
+boot1lastpage    0xbfc50000         0x00004000
+config_BFC54000  0xbfc54000         0x00000004
+config_BFC54004  0xbfc54004         0x00000004
+config_BFC54008  0xbfc54008         0x00000004
+config_BFC5400C  0xbfc5400c         0x00000004
+config_BFC54010  0xbfc54010         0x00000004
+config_BFC54020  0xbfc54020         0x00000004
+config_BFC54024  0xbfc54024         0x00000004
+boot2            0xbfc60000         0x0000ff00
+config_BFC6FF40  0xbfc6ff40         0x00000004
+config_BFC6FF44  0xbfc6ff44         0x00000004
+config_BFC6FF48  0xbfc6ff48         0x00000004
+config_BFC6FF4C  0xbfc6ff4c         0x00000004
+config_BFC6FF50  0xbfc6ff50         0x00000004
+config_BFC6FF54  0xbfc6ff54         0x00000004
+config_BFC6FF58  0xbfc6ff58         0x00000004
+config_BFC6FF5C  0xbfc6ff5c         0x00000004
+config_BFC6FF60  0xbfc6ff60         0x00000004
+config_BFC6FF64  0xbfc6ff64         0x00000004
+config_BFC6FF68  0xbfc6ff68         0x00000004
+config_BFC6FF6C  0xbfc6ff6c         0x00000004
+config_BFC6FF70  0xbfc6ff70         0x00000004
+config_BFC6FF74  0xbfc6ff74         0x00000004
+config_BFC6FF78  0xbfc6ff78         0x00000004
+config_BFC6FF7C  0xbfc6ff7c         0x00000004
+config_BFC6FFC0  0xbfc6ffc0         0x00000004
+config_BFC6FFC4  0xbfc6ffc4         0x00000004
+config_BFC6FFC8  0xbfc6ffc8         0x00000004
+config_BFC6FFCC  0xbfc6ffcc         0x00000004
+config_BFC6FFD0  0xbfc6ffd0         0x00000004
+config_BFC6FFD4  0xbfc6ffd4         0x00000004
+config_BFC6FFD8  0xbfc6ffd8         0x00000004
+config_BFC6FFDC  0xbfc6ffdc         0x00000004
+config_BFC6FFE0  0xbfc6ffe0         0x00000004
+config_BFC6FFE4  0xbfc6ffe4         0x00000004
+config_BFC6FFE8  0xbfc6ffe8         0x00000004
+config_BFC6FFEC  0xbfc6ffec         0x00000004
+config_BFC6FFF0  0xbfc6fff0         0x00000004
+config_BFC6FFF4  0xbfc6fff4         0x00000004
+config_BFC6FFF8  0xbfc6fff8         0x00000004
+config_BFC6FFFC  0xbfc6fffc         0x00000004
+boot2lastpage    0xbfc70000         0x00004000
+kseg0_data_mem   0x80000000         0x00080000         w !x
+sfrs             0xbf800000         0x00100000
+configsfrs_BFC0FF40 0xbfc0ff40         0x00000040
+configsfrs_BFC0FFC0 0xbfc0ffc0         0x00000040
+configsfrs_BFC4FF40 0xbfc4ff40         0x00000040
+configsfrs_BFC4FFC0 0xbfc4ffc0         0x00000040
+configsfrs_BFC54000 0xbfc54000         0x00000014
+configsfrs_BFC54020 0xbfc54020         0x00000008
+configsfrs_BFC6FF40 0xbfc6ff40         0x00000040
+configsfrs_BFC6FFC0 0xbfc6ffc0         0x00000040
+kseg2_ebi_data_mem 0xc0000000         0x04000000
+kseg2_sqi_data_mem 0xd0000000         0x04000000
+kseg3_ebi_data_mem 0xe0000000         0x04000000
+kseg3_sqi_data_mem 0xf0000000         0x04000000
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD build/MfgWiFire/production/_ext/1472/main.o
+LOAD build/MfgWiFire/production/_ext/1472/crt0MZ.o
+LOAD build/MfgWiFire/production/_ext/1472/pic32_init_cache.o
+LOAD build/MfgWiFire/production/_ext/1472/pic32_init_tlb_ebi_sqi.o
+                0x00000001                __MPLAB_BUILD = 0x1
+                0x00000400                PROVIDE (_min_stack_size, 0x400)
+                0x00000000                PROVIDE (_min_heap_size, 0x0)
+LOAD c:/program files (x86)/microchip/xc32/v1.42/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048ECG100\processor.o
+                0x00000001                PROVIDE (_vector_spacing, 0x1)
+                0x9d000000                _ebase_address = 0x9d000000
+                0xbfc00000                _RESET_ADDR = 0xbfc00000
+                0x00000600                _RAM_SKIP_SIZE = 0x600
+
+.config_BFC0FF40
+ *(.config_BFC0FF40)
+
+.config_BFC0FF44
+ *(.config_BFC0FF44)
+
+.config_BFC0FF48
+ *(.config_BFC0FF48)
+
+.config_BFC0FF4C
+ *(.config_BFC0FF4C)
+
+.config_BFC0FF50
+ *(.config_BFC0FF50)
+
+.config_BFC0FF54
+ *(.config_BFC0FF54)
+
+.config_BFC0FF58
+ *(.config_BFC0FF58)
+
+.config_BFC0FF5C
+ *(.config_BFC0FF5C)
+
+.config_BFC0FF60
+ *(.config_BFC0FF60)
+
+.config_BFC0FF64
+ *(.config_BFC0FF64)
+
+.config_BFC0FF68
+ *(.config_BFC0FF68)
+
+.config_BFC0FF6C
+ *(.config_BFC0FF6C)
+
+.config_BFC0FF70
+ *(.config_BFC0FF70)
+
+.config_BFC0FF74
+ *(.config_BFC0FF74)
+
+.config_BFC0FF78
+ *(.config_BFC0FF78)
+
+.config_BFC0FF7C
+ *(.config_BFC0FF7C)
+
+.config_BFC0FFC0
+                0xbfc0ffc0        0x4
+ *(.config_BFC0FFC0)
+ .config_BFC0FFC0
+                0xbfc0ffc0        0x4 build/MfgWiFire/production/_ext/1472/main.o
+
+.config_BFC0FFC4
+                0xbfc0ffc4        0x4
+ *(.config_BFC0FFC4)
+ .config_BFC0FFC4
+                0xbfc0ffc4        0x4 build/MfgWiFire/production/_ext/1472/main.o
+
+.config_BFC0FFC8
+                0xbfc0ffc8        0x4
+ *(.config_BFC0FFC8)
+ .config_BFC0FFC8
+                0xbfc0ffc8        0x4 build/MfgWiFire/production/_ext/1472/main.o
+
+.config_BFC0FFCC
+                0xbfc0ffcc        0x4
+ *(.config_BFC0FFCC)
+ .config_BFC0FFCC
+                0xbfc0ffcc        0x4 build/MfgWiFire/production/_ext/1472/main.o
+
+.config_BFC0FFD0
+ *(.config_BFC0FFD0)
+
+.config_BFC0FFD4
+ *(.config_BFC0FFD4)
+
+.config_BFC0FFD8
+ *(.config_BFC0FFD8)
+
+.config_BFC0FFDC
+                0xbfc0ffdc        0x4
+ *(.config_BFC0FFDC)
+ .config_BFC0FFDC
+                0xbfc0ffdc        0x4 build/MfgWiFire/production/_ext/1472/main.o
+
+.config_BFC0FFE0
+ *(.config_BFC0FFE0)
+
+.config_BFC0FFE4
+ *(.config_BFC0FFE4)
+
+.config_BFC0FFE8
+ *(.config_BFC0FFE8)
+
+.config_BFC0FFEC
+ *(.config_BFC0FFEC)
+
+.config_BFC0FFF0
+ *(.config_BFC0FFF0)
+
+.config_BFC0FFF4
+ *(.config_BFC0FFF4)
+
+.config_BFC0FFF8
+ *(.config_BFC0FFF8)
+
+.config_BFC0FFFC
+ *(.config_BFC0FFFC)
+
+.config_BFC4FF40
+ *(.config_BFC4FF40)
+
+.config_BFC4FF44
+ *(.config_BFC4FF44)
+
+.config_BFC4FF48
+ *(.config_BFC4FF48)
+
+.config_BFC4FF4C
+ *(.config_BFC4FF4C)
+
+.config_BFC4FF50
+ *(.config_BFC4FF50)
+
+.config_BFC4FF54
+ *(.config_BFC4FF54)
+
+.config_BFC4FF58
+ *(.config_BFC4FF58)
+
+.config_BFC4FF5C
+ *(.config_BFC4FF5C)
+
+.config_BFC4FF60
+ *(.config_BFC4FF60)
+
+.config_BFC4FF64
+ *(.config_BFC4FF64)
+
+.config_BFC4FF68
+ *(.config_BFC4FF68)
+
+.config_BFC4FF6C
+ *(.config_BFC4FF6C)
+
+.config_BFC4FF70
+ *(.config_BFC4FF70)
+
+.config_BFC4FF74
+ *(.config_BFC4FF74)
+
+.config_BFC4FF78
+ *(.config_BFC4FF78)
+
+.config_BFC4FF7C
+ *(.config_BFC4FF7C)
+
+.config_BFC4FFC0
+ *(.config_BFC4FFC0)
+
+.config_BFC4FFC4
+ *(.config_BFC4FFC4)
+
+.config_BFC4FFC8
+ *(.config_BFC4FFC8)
+
+.config_BFC4FFCC
+ *(.config_BFC4FFCC)
+
+.config_BFC4FFD0
+ *(.config_BFC4FFD0)
+
+.config_BFC4FFD4
+ *(.config_BFC4FFD4)
+
+.config_BFC4FFD8
+ *(.config_BFC4FFD8)
+
+.config_BFC4FFDC
+ *(.config_BFC4FFDC)
+
+.config_BFC4FFE0
+ *(.config_BFC4FFE0)
+
+.config_BFC4FFE4
+ *(.config_BFC4FFE4)
+
+.config_BFC4FFE8
+ *(.config_BFC4FFE8)
+
+.config_BFC4FFEC
+ *(.config_BFC4FFEC)
+
+.config_BFC4FFF0
+ *(.config_BFC4FFF0)
+
+.config_BFC4FFF4
+ *(.config_BFC4FFF4)
+
+.config_BFC4FFF8
+ *(.config_BFC4FFF8)
+
+.config_BFC4FFFC
+ *(.config_BFC4FFFC)
+
+.config_BFC54000
+ *(.config_BFC54000)
+
+.config_BFC54004
+ *(.config_BFC54004)
+
+.config_BFC54008
+ *(.config_BFC54008)
+
+.config_BFC5400C
+ *(.config_BFC5400C)
+
+.config_BFC54010
+ *(.config_BFC54010)
+
+.config_BFC54020
+ *(.config_BFC54020)
+
+.config_BFC54024
+ *(.config_BFC54024)
+
+.config_BFC6FF40
+ *(.config_BFC6FF40)
+
+.config_BFC6FF44
+ *(.config_BFC6FF44)
+
+.config_BFC6FF48
+ *(.config_BFC6FF48)
+
+.config_BFC6FF4C
+ *(.config_BFC6FF4C)
+
+.config_BFC6FF50
+ *(.config_BFC6FF50)
+
+.config_BFC6FF54
+ *(.config_BFC6FF54)
+
+.config_BFC6FF58
+ *(.config_BFC6FF58)
+
+.config_BFC6FF5C
+ *(.config_BFC6FF5C)
+
+.config_BFC6FF60
+ *(.config_BFC6FF60)
+
+.config_BFC6FF64
+ *(.config_BFC6FF64)
+
+.config_BFC6FF68
+ *(.config_BFC6FF68)
+
+.config_BFC6FF6C
+ *(.config_BFC6FF6C)
+
+.config_BFC6FF70
+ *(.config_BFC6FF70)
+
+.config_BFC6FF74
+ *(.config_BFC6FF74)
+
+.config_BFC6FF78
+ *(.config_BFC6FF78)
+
+.config_BFC6FF7C
+ *(.config_BFC6FF7C)
+
+.config_BFC6FFC0
+ *(.config_BFC6FFC0)
+
+.config_BFC6FFC4
+ *(.config_BFC6FFC4)
+
+.config_BFC6FFC8
+ *(.config_BFC6FFC8)
+
+.config_BFC6FFCC
+ *(.config_BFC6FFCC)
+
+.config_BFC6FFD0
+ *(.config_BFC6FFD0)
+
+.config_BFC6FFD4
+ *(.config_BFC6FFD4)
+
+.config_BFC6FFD8
+ *(.config_BFC6FFD8)
+
+.config_BFC6FFDC
+ *(.config_BFC6FFDC)
+
+.config_BFC6FFE0
+ *(.config_BFC6FFE0)
+
+.config_BFC6FFE4
+ *(.config_BFC6FFE4)
+
+.config_BFC6FFE8
+ *(.config_BFC6FFE8)
+
+.config_BFC6FFEC
+ *(.config_BFC6FFEC)
+
+.config_BFC6FFF0
+ *(.config_BFC6FFF0)
+
+.config_BFC6FFF4
+ *(.config_BFC6FFF4)
+
+.config_BFC6FFF8
+ *(.config_BFC6FFF8)
+
+.config_BFC6FFFC
+ *(.config_BFC6FFFC)
+
+.reset          0xbfc00000      0x1a0
+ *(.reset)
+ .reset         0xbfc00000      0x1a0 build/MfgWiFire/production/_ext/1472/crt0MZ.o
+                0xbfc00000                _reset
+                0xbfc00000                __pic32_software_reset
+ *(.reset.startup)
+
+.text
+ *(.stub .gnu.linkonce.t.*)
+ *(.text.*personality*)
+ *(.mips16.fn.*)
+ *(.mips16.call.*)
+ *(.gnu.warning)
+
+.rodata         0x9fc004b0        0x0
+ *(.rodata.* .gnu.linkonce.r.*)
+ *(.rodata1)
+                0x9fc004b0                . = ALIGN (0x4)
+
+.sdata2         0xbfc001a0        0x0
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0xbfc001a0                . = ALIGN (0x4)
+
+.sbss2          0xbfc001a0        0x0
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+                0xbfc001a0                . = ALIGN (0x4)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.dbg_data       0x80000000      0x380
+                0x80000000                _skip_ram_space_addr = .
+                0x80000380                . = (. + 0x380)
+ *fill*         0x80000000      0x380 
+
+.skip_ram_space
+                0x80000380      0x280
+                0x80000600                . = (. + (_RAM_SKIP_SIZE - SIZEOF (.dbg_data)))
+ *fill*         0x80000380      0x280 
+                0x80000600                _skip_ram_space_end_adder = .
+
+.eh_frame
+ *(.eh_frame)
+                0x80000600                . = .
+                0x800085f0                _gp = (ALIGN (0x10) + 0x7ff0)
+
+.got
+ *(.got.plt)
+ *(.got)
+
+.sdata          0x80000600       0x44
+                0x80000600                _sdata_begin = .
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x80000600       0x20 build/MfgWiFire/production/_ext/1472/main.o
+ .sdata         0x80000620       0x24 build/MfgWiFire/production/_ext/1472/pic32_init_cache.o
+                0x80000620                __pic32_icache_size
+                0x80000624                __pic32_icache_linesize
+                0x80000628                __pic32_icache_ways
+                0x8000062c                __pic32_dcache_size
+                0x80000630                __pic32_dcache_linesize
+                0x80000634                __pic32_dcache_ways
+                0x80000638                __pic32_scache_size
+                0x8000063c                __pic32_scache_linesize
+                0x80000640                __pic32_scache_ways
+                0x80000644                _sdata_end = .
+
+.lit8
+ *(.lit8)
+
+.lit4
+ *(.lit4)
+                0x80000644                . = ALIGN (0x4)
+                0x80000644                _data_end = .
+                0x80000644                _bss_begin = .
+
+.sbss           0x80000644       0x3c
+                0x80000644                _sbss_begin = .
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x80000644       0x3c build/MfgWiFire/production/_ext/1472/main.o
+ *(.scommon)
+                0x80000680                _sbss_end = .
+
+.bss            0x80000680        0x0
+ *(.dynbss)
+ *(COMMON)
+                0x80000680                . = ALIGN (0x4)
+                0x80000680                . = ALIGN (0x4)
+                0x80000680                _end = .
+                0x80000680                _bss_end = .
+                0x00080000                _bmxdudba_address = 0x80000
+                0x00080000                _bmxdupba_address = 0x80000
+
+/DISCARD/
+ *(.pdr)
+ *(.reginfo)
+ *(.rel.dyn)
+ *(.note.GNU-stack)
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+ *(.discard)
+ *(._debug_exception)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x3c
+ *(.comment)
+ .comment       0x00000000       0x3c build/MfgWiFire/production/_ext/1472/main.o
+                                 0x3d (size before relaxing)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x98
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 build/MfgWiFire/production/_ext/1472/main.o
+ .debug_aranges
+                0x00000020       0x28 build/MfgWiFire/production/_ext/1472/crt0MZ.o
+ .debug_aranges
+                0x00000048       0x30 build/MfgWiFire/production/_ext/1472/pic32_init_cache.o
+ .debug_aranges
+                0x00000078       0x20 build/MfgWiFire/production/_ext/1472/pic32_init_tlb_ebi_sqi.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x17c8
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000     0x1669 build/MfgWiFire/production/_ext/1472/main.o
+ .debug_info    0x00001669       0x6b build/MfgWiFire/production/_ext/1472/crt0MZ.o
+ .debug_info    0x000016d4       0x75 build/MfgWiFire/production/_ext/1472/pic32_init_cache.o
+ .debug_info    0x00001749       0x7f build/MfgWiFire/production/_ext/1472/pic32_init_tlb_ebi_sqi.o
+
+.debug_abbrev   0x00000000      0x367
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x32f build/MfgWiFire/production/_ext/1472/main.o
+ .debug_abbrev  0x0000032f       0x12 build/MfgWiFire/production/_ext/1472/crt0MZ.o
+ .debug_abbrev  0x00000341       0x12 build/MfgWiFire/production/_ext/1472/pic32_init_cache.o
+ .debug_abbrev  0x00000353       0x14 build/MfgWiFire/production/_ext/1472/pic32_init_tlb_ebi_sqi.o
+
+.debug_line     0x00000000      0x518
+ *(.debug_line)
+ .debug_line    0x00000000      0x319 build/MfgWiFire/production/_ext/1472/main.o
+ .debug_line    0x00000319       0xc1 build/MfgWiFire/production/_ext/1472/crt0MZ.o
+ .debug_line    0x000003da       0xc7 build/MfgWiFire/production/_ext/1472/pic32_init_cache.o
+ .debug_line    0x000004a1       0x77 build/MfgWiFire/production/_ext/1472/pic32_init_tlb_ebi_sqi.o
+
+.debug_frame    0x00000000      0x16c
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x16c build/MfgWiFire/production/_ext/1472/main.o
+
+.debug_str      0x00000000       0x2c
+ *(.debug_str)
+ .debug_str     0x00000000       0x2c build/MfgWiFire/production/_ext/1472/main.o
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000       0x48
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x20 build/MfgWiFire/production/_ext/1472/crt0MZ.o
+ .debug_ranges  0x00000020       0x28 build/MfgWiFire/production/_ext/1472/pic32_init_cache.o
+
+.gnu.attributes
+ *(.gnu.attributes)
+OUTPUT(dist/MfgWiFire/production/chipKIT-Bootloaders.X.production.elf elf32-tradlittlemips)
+LOAD stack
+LOAD data_init
+
+.stack          0x80001020      0x400
+ .stack         0x80001020      0x400 stack
+
+.bss            0x80000680      0x980
+ .bss           0x80000680      0x980 build/MfgWiFire/production/_ext/1472/main.o
+
+.bss            0x00000000        0x0
+ .bss           0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.42/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048ECG100\processor.o
+
+.data           0x00000000        0x0
+ .data          0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.42/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048ECG100\processor.o
+
+.bss            0x00000000        0x0
+ .bss           0x00000000        0x0 build/MfgWiFire/production/_ext/1472/pic32_init_tlb_ebi_sqi.o
+
+.data           0x00000000        0x0
+ .data          0x00000000        0x0 build/MfgWiFire/production/_ext/1472/pic32_init_tlb_ebi_sqi.o
+
+.bss            0x00000000        0x0
+ .bss           0x00000000        0x0 build/MfgWiFire/production/_ext/1472/pic32_init_cache.o
+
+.data           0x00000000        0x0
+ .data          0x00000000        0x0 build/MfgWiFire/production/_ext/1472/pic32_init_cache.o
+
+.bss            0x00000000        0x0
+ .bss           0x00000000        0x0 build/MfgWiFire/production/_ext/1472/crt0MZ.o
+
+.data           0x00000000        0x0
+ .data          0x00000000        0x0 build/MfgWiFire/production/_ext/1472/crt0MZ.o
+
+.mdebug.abi32   0x00000000        0x0
+ .mdebug.abi32  0x00000000        0x0 build/MfgWiFire/production/_ext/1472/main.o
+
+.data           0x00000000        0x0
+ .data          0x00000000        0x0 build/MfgWiFire/production/_ext/1472/main.o
+
+.text           0x9fc004b0     0x15f0
+ .text          0x9fc004b0     0x15f0 build/MfgWiFire/production/_ext/1472/main.o
+                0x9fc004b0                main
+                0x9fc007d8                avrbl_state_machine
+
+.cache_init.cache
+                0x9fc01aa0       0xc0
+ .cache_init.cache
+                0x9fc01aa0       0xc0 build/MfgWiFire/production/_ext/1472/pic32_init_cache.o
+
+.cache_init.pic32_init_cache
+                0x9fc01b60       0xc0
+ .cache_init.pic32_init_cache
+                0x9fc01b60       0xc0 build/MfgWiFire/production/_ext/1472/pic32_init_cache.o
+                0x9fc01b60                __pic32_init_cache
+
+.tlb.__pic32_tlb_init_ebi_sqi
+                0x9fc01c20       0xbc
+ .tlb.__pic32_tlb_init_ebi_sqi
+                0x9fc01c20       0xbc build/MfgWiFire/production/_ext/1472/pic32_init_tlb_ebi_sqi.o
+                0x9fc01c20                __pic32_tlb_init_ebi_sqi
+
+.dinit          0x9fc01cdc       0x80
+ .dinit         0x9fc01cdc       0x80 data_init
+
+.cache_init.pic32_size_cache
+                0x9fc01d5c       0x3c
+ .cache_init.pic32_size_cache
+                0x9fc01d5c       0x3c build/MfgWiFire/production/_ext/1472/pic32_init_cache.o
+                0x9fc01d5c                __pic32_size_cache
+
+.text.main_entry
+                0x9fc01d98       0x34
+ .text.main_entry
+                0x9fc01d98       0x34 build/MfgWiFire/production/_ext/1472/crt0MZ.o
+                0x9fc01dc4                __crt0_exit
+
+.rodata         0x9fc01dcc        0xc
+ .rodata        0x9fc01dcc        0xc build/MfgWiFire/production/_ext/1472/main.o
+
+.text           0x00000000        0x0
+ .text          0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.42/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048ECG100\processor.o
+
+.text           0x00000000        0x0
+ .text          0x00000000        0x0 build/MfgWiFire/production/_ext/1472/pic32_init_tlb_ebi_sqi.o
+
+.text           0x00000000        0x0
+ .text          0x00000000        0x0 build/MfgWiFire/production/_ext/1472/pic32_init_cache.o
+
+.text           0x00000000        0x0
+ .text          0x00000000        0x0 build/MfgWiFire/production/_ext/1472/crt0MZ.o

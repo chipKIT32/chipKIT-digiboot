@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="dist/uC32_350/production/chipKIT-Bootloaders.X.production.elf">                 
+    <memory name="program">                 
+      <units>bytes</units>                 
+      <length>7888</length>                 
+      <used>2768</used>                     
+      <free>5120</free>                     
+    </memory>                              
+    <memory name="data">              
+      <units>bytes</units>                 
+      <length>16384</length>                 
+      <used>3996</used>                     
+      <free>12388</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 
